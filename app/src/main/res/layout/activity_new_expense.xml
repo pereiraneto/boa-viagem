@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="7pt">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="7pt">
+            <TextView
+                android:id="@+id/toHomeBreadcrumb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="8pt"
+                android:padding="2pt"
+                android:textColor="@color/colorSecundary"
+                android:background="@color/colorAccent"
+                android:clickable="true"
+                android:onClick="onClickBreadcrumb"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" > Novo gasto"
+                android:textSize="8pt"
+                android:textColor="@color/colorSecundary"/>
+        </LinearLayout>
+
+        <TableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1,2"
+            android:background="@color/colorSecundary"
+            android:padding="5pt">
+
+            <TextView
+                android:text="Categoria"
+                android:textSize="8pt"/>
+
+            <Spinner
+                android:id="@+id/categoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </Spinner>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="#555"/>
+            <TableRow>
+                <TextView
+                    android:text="Valor"
+                    android:textSize="8pt"/>
+
+                <TextView
+                    android:text="Data"
+                    android:textSize="8pt"/>
+            </TableRow>
+
+            <TableRow>
+                <EditText
+                    android:id="@+id/valorEditText"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/edit_text_box"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <Button
+                    android:id="@+id/dataGasto"
+                    android:onClick="selecionarDataGasto"
+                    android:text="Selecione"
+                    android:background="@color/colorPrimaryDark"
+                    android:textColor="@color/textColor"
+                    android:layout_marginLeft="2pt"
+                    android:layout_marginRight="2pt"
+                    android:textAlignment="textStart"
+                    android:drawableLeft="@android:drawable/ic_menu_today" />
+            </TableRow>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="#555"/>
+
+            <TextView
+                android:text="Descrição"
+                android:textSize="8pt"/>
+
+            <EditText
+                android:id="@+id/descricaoEditText"
+                android:inputType="text"
+                android:background="@drawable/edit_text_box"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="#555"/>
+
+            <TextView
+                android:text="Local"
+                android:textSize="8pt"/>
+
+            <Spinner
+                android:id="@+id/locaisSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </Spinner>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="#555"/>
+            
+            <Button
+                android:onClick="salvarViagem"
+                android:text="Gastei !"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/textColor"
+                android:layout_marginTop="5dp"/>
+
+        </TableLayout>
+    </LinearLayout>
+
+
+</ScrollView>

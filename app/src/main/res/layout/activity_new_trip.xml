@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="7pt">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="7pt">
+            <TextView
+                android:id="@+id/toHomeBreadcrumb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="8pt"
+                android:padding="2pt"
+                android:textColor="@color/colorSecundary"
+                android:background="@color/colorAccent"
+                android:clickable="true"
+                android:onClick="onClickBreadcrumb"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" > Nova viagem"
+                android:textSize="8pt"
+                android:textColor="@color/colorSecundary"/>
+        </LinearLayout>
+
+        <TableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1,2"
+            android:background="@color/colorSecundary"
+            android:padding="5pt">
+
+            <TextView
+                android:text="Destino"
+                android:textSize="8pt"/>
+
+            <EditText
+                android:id="@+id/destinoEditText"
+                android:inputType="text"
+                android:background="@drawable/edit_text_box"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="#555"/>
+
+            <TextView
+                android:text="Tipo da viagem"
+                android:textSize="8pt"/>
+
+            <RadioGroup
+                android:id="@+id/tipoViagemRadioButton"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lazer"
+                    android:checked="true"
+                    android:text="Lazer"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <RadioButton
+                    android:id="@+id/negocios"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="Negócios"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="#555"/>
+
+            <TableRow>
+                <TextView
+                    android:layout_gravity="center"
+                    android:text="Data da chegada"
+                    android:textSize="8pt"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:text="Data da saída"
+                    android:textSize="8pt"/>
+            </TableRow>
+
+            <TableRow>
+                <Button
+                    android:id="@+id/dataChegada"
+                    android:onClick="selecionarData"
+                    android:text="Selecione"
+                    android:background="@color/colorPrimaryDark"
+                    android:textColor="@color/textColor"
+                    android:layout_marginLeft="2pt"
+                    android:layout_marginRight="2pt"
+                    android:textAlignment="textStart"
+                    android:drawableLeft="@android:drawable/ic_menu_today" />
+
+                <Button
+                    android:id="@+id/dataSaida"
+                    android:onClick="selecionarData"
+                    android:text="Selecione"
+                    android:background="@color/colorPrimaryDark"
+                    android:textColor="@color/textColor"
+                    android:layout_marginLeft="2pt"
+                    android:layout_marginRight="2pt"
+                    android:textAlignment="textStart"
+                    android:drawableLeft="@android:drawable/ic_menu_today" />
+
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="#555"/>
+
+            <TextView
+                android:text="Orçameto"
+                android:textSize="8pt"/>
+
+            <EditText
+                android:id="@+id/orcamentoEditText"
+                android:inputType="numberDecimal"
+                android:background="@drawable/edit_text_box"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="#555"/>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Nº de pessoas"
+                    android:textSize="8pt"/>
+
+                <EditText
+                    android:id="@+id/qtdPessoasEditText"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:background="@drawable/edit_text_line"
+                    android:textColor="@color/colorPrimaryDark"/>
+            </TableRow>
+
+            <Button
+                android:onClick="salvarViagem"
+                android:text="Criar viagem"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/textColor"
+                android:layout_marginTop="5dp"/>
+
+        </TableLayout>
+    </LinearLayout>
+
+
+</ScrollView>

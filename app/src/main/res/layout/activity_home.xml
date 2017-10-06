@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/item_novo_gasto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:onClick="selecionarOpcao">
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_gravity="center"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/novo_gasto_1" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/novo_gasto"
+                android:textStyle="bold"
+                android:textColor="@color/textColor"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/item_nova_viagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:onClick="selecionarOpcao">
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_gravity="center"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/nova_viagem_1" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/nova_viagem"
+                android:textStyle="bold"
+                android:textColor="@color/textColor"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/item_minhas_viagens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:onClick="selecionarOpcao">
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_gravity="center"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/minhas_viagens_1" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/minhas_viagens"
+                android:textStyle="bold"
+                android:textColor="@color/textColor"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/item_configuracoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:onClick="selecionarOpcao">
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_gravity="center"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/settings" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/configuracoes"
+                android:textStyle="bold"
+                android:textColor="@color/textColor"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
